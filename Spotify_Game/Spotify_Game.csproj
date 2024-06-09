@@ -8,22 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Auth\**" />
-    <EmbeddedResource Remove="Auth\**" />
-    <None Remove="Auth\**" />
-    <Page Remove="Auth\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Images\moreless.png" />
     <None Remove="Images\snoop.png" />
     <None Remove="Images\spotifylogo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.122" />
+    <PackageReference Include="SpotifyAPI.Web" Version="7.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\moreless.png" />
     <Resource Include="Images\snoop.png" />
     <Resource Include="Images\spotifylogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
   </ItemGroup>
 
 </Project>

@@ -19,6 +19,10 @@
                 <view:ProfileView/>
             </DataTemplate>
 
-        </ResourceDictionary>
+			<DataTemplate DataType="{x:Type viewModel:GameViewModel}">
+				<view:GameView/>
+			</DataTemplate>
+
+		</ResourceDictionary>
     </Application.Resources>
 </Application>

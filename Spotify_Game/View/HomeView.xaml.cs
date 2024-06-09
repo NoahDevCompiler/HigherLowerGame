@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spotify_Game.View.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace Spotify_Game.View
     {
         public HomeView() {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
+        
     }
 }

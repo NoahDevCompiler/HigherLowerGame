@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Spotify_Game"
+        xmlns:local="clr-namespace:Spotify_Game"	
         xmlns:viewModel="clr-namespace:Spotify_Game.View.ViewModel"
+		xmlns:views="clr-namespace:Spotify_Game.View"
         mc:Ignorable="d"
 		Background="Transparent"
 		AllowsTransparency="true"
@@ -12,58 +13,74 @@
 		WindowStyle="none"
         Title="MainWindow" Height="600" Width="950">
 
-    <Window.DataContext>
-        <viewModel:MainViewModel/>
-    </Window.DataContext>
+	<Window.DataContext>
+		<viewModel:MainViewModel/>
+	</Window.DataContext>
 
-    <Border Background="#272537" 
+
+	<Border Background="#272537" 
 			CornerRadius="10">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="200"/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="75"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
 
-            <TextBlock Text="More or Less"
+			<TextBlock Text="More or Less"
 					   VerticalAlignment="Center"
 					   HorizontalAlignment="Left"
 					   Foreground="White"
 					   FontSize="22"
 					   Margin="10,0,0,0"/>
-            <Image
+			<Image
                    Source="/Images/moreless.png" Margin="133,31,10,23" RenderTransformOrigin="1.433,0.758"/>
 
-            <StackPanel Grid.Row="1">
+			<StackPanel Grid.Row="1">
 
-                <RadioButton Content="Home"
+				<RadioButton Content="Home"
 							 Height="50"
 							 Foreground="White"
 							 FontSize="14"
 							 Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Songs"
+				<RadioButton Content="Game"
+							 x:Name="gamerbtn"
 							 Height="50"
 							 Foreground="White"
 							 FontSize="14"
-							 Style="{StaticResource MenuButtonTheme}"/>
-                <RadioButton Content="Profile"
+							 Style="{StaticResource MenuButtonTheme}"
+							 Command="{Binding GameViewCommand}" Checked="gamerbtn_Checked"/>
+				<RadioButton Content="Profile"
 							 Height="50"
 							 Foreground="White"
 							 FontSize="14"
 							 Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding ProfileViewCommand}"/>
-            </StackPanel>
+			</StackPanel>
 
-            <ContentControl Grid.Row="1"
-							Grid.Column="1"
-							Margin="10"
-							Content="{Binding CurrentView}"/>
-        </Grid>
-    </Border>
+			<ContentControl Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"
+				Content="{Binding CurrentView}">
+				<ContentControl.Style>
+					<Style TargetType="ContentControl">
+						<Setter Property="Margin" Value="10"/>
+						<Setter Property="Grid.Column" Value="1"/>
+						<Style.Triggers>
+							<DataTrigger Binding="{Binding gamerbtn}" Value="True">
+								<Setter Property="Margin" Value="10,10,0,0"/>
+								<Setter Property="Grid.Column" Value="2"/>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</ContentControl.Style>
+			</ContentControl>
+		</Grid>
+	</Border>
 </Window>

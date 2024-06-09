@@ -23,5 +23,10 @@ namespace Spotify_Game
         public MainWindow() {
             InitializeComponent();
         }
+
+        private void gamerbtn_Checked(object sender, RoutedEventArgs e) {
+
+            
+        }
     }
 }

@@ -13,11 +13,13 @@ namespace Spotify_Game.View.ViewModel
      class MainViewModel : ObservableObject
      {
 
-        public RelayCommand  HomeViewCommand { get; set; } 
+        public RelayCommand HomeViewCommand { get; set; } 
         public RelayCommand ProfileViewCommand { get; set; }
+        public RelayCommand GameViewCommand { get; set; }
         
         public HomeViewModel HomeVM { get; set; }
         public ProfileViewModel ProfileVM { get; set; }
+        public GameViewModel GameVM { get; set; }
 
         private object _currentView;
 
@@ -33,14 +35,20 @@ namespace Spotify_Game.View.ViewModel
 
             HomeVM = new HomeViewModel();
             ProfileVM = new ProfileViewModel();
+            GameVM = new GameViewModel();
 
             CurrentView = HomeVM;
 
             HomeViewCommand = new RelayCommand(o => {
                 CurrentView = HomeVM;
             });
+
             ProfileViewCommand = new RelayCommand(o => {
                 CurrentView = ProfileVM;
+            });
+
+            GameViewCommand = new RelayCommand(o => {
+                CurrentView = GameVM;
             });
         }
      }

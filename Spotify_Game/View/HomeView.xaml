@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Spotify_Game.View"
+             xmlns:local="clr-namespace:Spotify_Game"
+			 xmlns:viewModel="clr-namespace:Spotify_Game.View.ViewModel"			 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
+	<UserControl.DataContext>
+		<viewModel:MainViewModel/>
+	</UserControl.DataContext>
+
 	<StackPanel>
 		<TextBlock Text="Discover"
 				   Foreground="White"
@@ -16,8 +22,8 @@
 		<StackPanel Orientation="Horizontal">
 			<Border Width="400"
 					Height="200"
-                    Margin="0,0,0,10">
-
+                    Margin="0,0,0,10"
+					>
 				<Border.Background>
 					<LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
 						<GradientStop Color="#E246AB" Offset="0.0"/>
@@ -31,6 +37,7 @@
 									   Rect="0,0,400,200"/>
 				</Border.Clip>
 
+
 				<Grid>
 					<StackPanel>
 						<TextBlock Text="More Less Game"
@@ -39,6 +46,8 @@
 								   FontSize="28"
 								   Margin="0,0,0,10"
 								   />
+				
+						
 						<TextBlock Text="Spotify Tracks Popularity"
 								   HorizontalAlignment="Center"
 								   Foreground="Black"
@@ -48,7 +57,10 @@
 
 					<Image
 						   Source="/Images/spotifylogo.png" Margin="0,38,0,2"/>
+					
+
 				</Grid>
+				
 			</Border>
 
 			<Border Width="250"
@@ -85,13 +97,13 @@
 					</StackPanel>
 
 					<Image
-						   Source="/Images/moneyboy.jpg" Margin="-60,108,140,2"/>
+						   Source="/Images/moneyboy.jpg" Margin="-40,108,120,2"/>
 					<Image
 						   Source="/Images/snoop.png" Margin="85,108,-5,2"/>
 				</Grid>
 			</Border>
 		</StackPanel>
-		
+
 		<StackPanel>
 
 			<StackPanel.Resources>
@@ -118,9 +130,8 @@
 						Height="150"
 						Background="#833eff"
 						CornerRadius="10"/>
-				
+
 			</StackPanel>
-			
 		</StackPanel>
 	</StackPanel>
 </UserControl>
