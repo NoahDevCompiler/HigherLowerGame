@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\App.xaml
-3-2107654636
+4720806364
 
-10-1956028975
+13-931811577
 1941709816142
-MainWindow.xaml;View\HomeView.xaml;View\Theme\MenuButtonTheme.xaml;
+MainWindow.xaml;View\HomeView.xaml;View\ProfileView.xaml;View\Theme\MenuButtonTheme.xaml;
 
 False
 
