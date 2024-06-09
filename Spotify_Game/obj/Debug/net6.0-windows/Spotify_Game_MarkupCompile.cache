@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\obj\Debug\net6.0-windows\
+C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\net6.0-windows\
 Spotify_Game
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\App.xaml
-3-2107654636
+C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\App.xaml
+4720806364
 
-7-1209188034
-1941709816142
-MainWindow.xaml;View\HomeView.xaml;View\Theme\MenuButtonTheme.xaml;
+111359060396
+194101785492
+MainWindow.xaml;View\HomeView.xaml;View\ProfileView.xaml;View\Theme\MenuButtonTheme.xaml;
 
 False
 
