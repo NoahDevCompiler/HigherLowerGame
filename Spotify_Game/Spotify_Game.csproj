@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Poppins-Regular.ttf" />
+    <None Remove="Fonts\Tiny5-Regular.ttf" />
     <None Remove="Images\moreless.png" />
     <None Remove="Images\snoop.png" />
     <None Remove="Images\spotifylogo.png" />
@@ -19,13 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\Poppins-Regular.ttf" />
+    <Resource Include="Fonts\Tiny5-Regular.ttf" />
     <Resource Include="Images\moreless.png" />
     <Resource Include="Images\snoop.png" />
     <Resource Include="Images\spotifylogo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Fonts\" />
   </ItemGroup>
 
 </Project>

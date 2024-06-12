@@ -23,8 +23,32 @@ namespace Spotify_Game.View
     {
         public HomeView() {
             InitializeComponent();
-            DataContext = new MainViewModel();
         }
-        
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+
+            Window parentWindow = Window.GetWindow(this);
+
+            GameView newWindow = new GameView();
+
+           
+            newWindow.Width = 950;
+            newWindow.Height = 600;
+            newWindow.Left = parentWindow.Left;
+            newWindow.Top = parentWindow.Top;
+
+          
+          
+
+          
+            newWindow.Closed += (s, args) => {                     
+                parentWindow.Show();
+            };
+
+         
+            parentWindow.Hide();
+           
+            newWindow.Show();
+        }
+
     }
 }
