@@ -50,7 +50,7 @@
 							 Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding HomeViewCommand}"/>
 				<RadioButton Content="Game"
-							 x:Name="gamerbtn"
+							 Name="gamerbtn"
 							 Height="50"
 							 Foreground="White"
 							 FontSize="14"
@@ -73,10 +73,10 @@
 						<Setter Property="Margin" Value="10"/>
 						<Setter Property="Grid.Column" Value="1"/>
 						<Style.Triggers>
-							<DataTrigger Binding="{Binding gamerbtn}" Value="True">
-								<Setter Property="Margin" Value="10,10,0,0"/>
-								<Setter Property="Grid.Column" Value="2"/>
-							</DataTrigger>
+                            <DataTrigger Binding="{Binding IsChecked, ElementName=gamerbtn}" Value="True">
+                                <Setter Property="Grid.RowSpan" Value="2"/>
+                               
+                            </DataTrigger>
 						</Style.Triggers>
 					</Style>
 				</ContentControl.Style>
