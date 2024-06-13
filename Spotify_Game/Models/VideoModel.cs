@@ -15,6 +15,7 @@ namespace Spotify_Game.Models
         {
             public string Title { get; set; }
             public string ThumbnailUrl { get; set; }
+            public string ChannelTitle { get; set; }
         }
 
         public class Statistics

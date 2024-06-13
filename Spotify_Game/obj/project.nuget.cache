@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wnnCGXoPQfA=",
+  "dgSpecHash": "LVDtE+qOMyV9ZVToW/ke7ROFAjwfO/sS73UU/erdf9J8f8vIWkCKEaPPBqEhRIfoRBfE56g0lBXnZ99U3DEM8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\Spotify_Game\\HigherLowerGame\\Spotify_Game\\Spotify_Game.csproj",
+  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\Spotify_Game\\Spotify_Game\\Spotify_Game.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Noah\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",

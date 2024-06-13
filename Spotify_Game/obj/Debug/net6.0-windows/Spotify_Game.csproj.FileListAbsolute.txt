@@ -74,3 +74,10 @@ C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\n
 C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\net6.0-windows\Spotify_Game.pdb
 C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\net6.0-windows\Spotify_Game.genruntimeconfig.cache
 C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\net6.0-windows\ref\Spotify_Game.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\Google.Apis.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\Google.Apis.Auth.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\Google.Apis.Core.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\Google.Apis.YouTube.v3.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\System.CodeDom.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Noah\source\repos\Spotify_Game\Spotify_Game\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
