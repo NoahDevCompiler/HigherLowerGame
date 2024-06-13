@@ -1,7 +1,7 @@
 ﻿Spotify_Game
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\obj\Debug\net6.0-windows\
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Noah\source\repos\Spotify_Game\HigherLowerGame\Spotify_Game\App.xaml
 5-1657634396
 
-17-1294624812
-1971995974384
+16430195631
+202-473899246
 MainWindow.xaml;View\GameView.xaml;View\HomeView.xaml;View\ProfileView.xaml;View\Theme\MenuButtonTheme.xaml;
 
-True
+False
 

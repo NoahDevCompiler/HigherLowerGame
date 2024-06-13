@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "6QYMkDqF5vDKxmFfPtI1KMXVdglH3dVMiqZpXSkyxd23gQF2zlJqOC6p1Yh81n47oRhVcbS057fK/Q+fEA8IcA==",
+  "dgSpecHash": "wnnCGXoPQfA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\Spotify_Game\\Spotify_Game\\Spotify_Game.csproj",
+  "projectFilePath": "C:\\Users\\Noah\\source\\repos\\Spotify_Game\\HigherLowerGame\\Spotify_Game\\Spotify_Game.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Noah\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
+    "C:\\Users\\Noah\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
+    "C:\\Users\\Noah\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",
+    "C:\\Users\\Noah\\.nuget\\packages\\google.apis.youtube.v3\\1.68.0.3421\\google.apis.youtube.v3.1.68.0.3421.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.122\\microsoft.xaml.behaviors.wpf.1.1.122.nupkg.sha512",
     "C:\\Users\\Noah\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Noah\\.nuget\\packages\\spotifyapi.web\\7.1.1\\spotifyapi.web.7.1.1.nupkg.sha512"
+    "C:\\Users\\Noah\\.nuget\\packages\\spotifyapi.web\\7.1.1\\spotifyapi.web.7.1.1.nupkg.sha512",
+    "C:\\Users\\Noah\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Noah\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
