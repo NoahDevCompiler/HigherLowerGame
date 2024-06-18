@@ -4,26 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spotify_Game.View"
-        mc:Ignorable="d"	
-		ResizeMode="NoResize"
-		WindowStyle="None"
+        xmlns:core="clr-namespace:Spotify_Game.Core"
+        mc:Ignorable="d"    
+        ResizeMode="NoResize"
+        WindowStyle="None"
         AllowsTransparency="True"
-		Background="Transparent"
-        Title="GameView" Height="600" Width="950"
-		>
+        Background="Transparent"
+        Title="GameView" Height="600" Width="950">
 
-	<Window.Triggers>
-		<EventTrigger RoutedEvent="Loaded">
-			<BeginStoryboard>
-				<Storyboard Duration="00:00:05" Storyboard.TargetProperty="Opacity">
-					<DoubleAnimation From="0" To="1"/>
-				</Storyboard>
-			</BeginStoryboard>
-		</EventTrigger>
-	</Window.Triggers>
 
-	<Border Background="#272537"
-			CornerRadius="10">
+	<Border Background="#272537" CornerRadius="10">
 		<Grid>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition/>
@@ -36,14 +26,7 @@
 				<RowDefinition/>
 			</Grid.RowDefinitions>
 
-			<Button Grid.Column="1"		
-					HorizontalAlignment="Right" 
-					VerticalAlignment="Top" 
-					Margin="0,10,10,0" 
-					Click="CloseButton_Click" Height="17" Width="16"
-					Background="Red"
-					BorderThickness="0">
-
+			<Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Click="CloseButton_Click" Height="17" Width="16" Background="Red" BorderThickness="0">
 				<Button.Resources>
 					<Style TargetType="Border">
 						<Setter Property="CornerRadius" Value="15"/>
@@ -52,45 +35,62 @@
 			</Button>
 
 			<StackPanel Grid.Column="1" Margin="10,0,0,0">
-				<TextBlock Text="0" HorizontalAlignment="Left" FontFamily="/Fonts/#Tiny5" FontSize="20" />
+				<TextBlock x:Name="score" Text="0" HorizontalAlignment="Left" FontFamily="/Fonts/#Tiny5" FontSize="20" />
 				<TextBlock Grid.Column="1" Text="Score" Foreground="Black" FontFamily="/Fonts/#Tiny5" Margin="0,1,0,0" FontSize="20"/>
 			</StackPanel>
 
 			<StackPanel HorizontalAlignment="Left" Margin="380,0,0,0" Width="85">
-				<TextBlock Text="0" HorizontalAlignment="Right" FontFamily="/Fonts/#Tiny5" FontSize="20" />
+				<TextBlock x:Name="highscore" Text="0" HorizontalAlignment="Right" FontFamily="/Fonts/#Tiny5" FontSize="20" />
 				<TextBlock Text="Highscore" Foreground="Black" FontFamily="/Fonts/#Tiny5" FontSize="20" />
 			</StackPanel>
 
+			<Grid Grid.Column="0" Grid.Row="1">
+				<Image x:Name="LeftImage" Width="auto" VerticalAlignment="Center" Height="auto" Stretch="Uniform"/>
 
-			<StackPanel Grid.Column="0" Grid.Row="1">
-				<Image x:Name="LeftImage"  Width="auto" Height="auto" Stretch="Fill" />
-				<TextBlock x:Name="LeftTitle" Foreground="White" Panel.ZIndex="1000"  FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
-				<TextBlock x:Name="LeftChannel" Foreground="White" FontSize="14" TextAlignment="Center"/>
-				<TextBlock x:Name="LeftViews" Foreground="White" FontSize="14" TextAlignment="Center"/>
-			</StackPanel>
+				<StackPanel VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1">
+					<TextBlock x:Name="LeftTitle" Foreground="White" Panel.ZIndex="1000" FontSize="16" FontWeight="Bold" TextAlignment="Center" Width="448"/>
+					<TextBlock x:Name="LeftChannel" Foreground="Gray" FontSize="14" TextAlignment="Center" Width="434"/>
+					<TextBlock x:Name="LeftViews" Foreground="White" FontSize="14" TextAlignment="Center" Height="23" Width="448"/>
+				</StackPanel>
+			</Grid>
 
-			<StackPanel Grid.Column="1" Grid.Row="1">
-				<Image x:Name="RightImage" Width="auto" Height="auto" Stretch="Fill" />
-				<TextBlock x:Name="RightTitle" Foreground="White" FontSize="16" FontWeight="Bold" TextAlignment="Center" />
-				<TextBlock x:Name="RightChannel" Foreground="White" FontSize="14" TextAlignment="Center" />
-				<TextBlock x:Name="RightViews" Foreground="White" FontSize="14" TextAlignment="Center" />
-			</StackPanel>
+			<Grid Grid.Column="1" Grid.Row="1">
 
-			<StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+				<Image x:Name="RightImage" VerticalAlignment="Center" Width="auto" Height="auto" Stretch="Uniform"/>
 
-				<Viewbox  HorizontalAlignment="Center" Height="65" Width="65" Margin="0,200,0,0">
-					<Grid Width="20" Height="20" >
-						<Ellipse Stroke="Black"
-								Fill="Black"/>
-						<TextBlock FontSize="5" Text="Vs" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<StackPanel VerticalAlignment="Bottom" Height="56" Margin="34,0,0,0">
+					<TextBlock x:Name="RightTitle" Foreground="White" FontSize="16" FontWeight="Bold" TextAlignment="Center" Width="413"/>
+					<TextBlock x:Name="RightChannel" Foreground="Gray" FontSize="14" TextAlignment="Center"/>
+					<TextBlock x:Name="RightViews" Foreground="White" FontSize="14" TextAlignment="Center"/>
+				</StackPanel>
+
+			</Grid>
+
+			<StackPanel Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="146">
+				<Button x:Name="HigherButton" Style="{StaticResource GameButton}" Click="HigherButton_Click">
+					<Image Source="/Images/arrowup.png" Stretch="Uniform"/>
+				</Button>
+
+				<Viewbox Height="276" Width="154" Margin="0,10" RenderTransformOrigin="0.5,0.5">
+
+					<Grid>
+						<Image x:Name="versus" Source="/Images/versus.png" Width="44"  
+								HorizontalAlignment="Center" VerticalAlignment="Center" 
+								Height="34" Grid.Column="1"/>
+						<Image x:Name="tick" Source="/Images/tick.png" Width="44"  
+								HorizontalAlignment="Center" VerticalAlignment="Center" 
+								Height="34" Grid.Column="1"
+								Visibility="Collapsed"/>
+						<Image x:Name="cross" Source="/Images/cross.png" Width="44"  
+								HorizontalAlignment="Center" VerticalAlignment="Center" 
+								Height="34" Grid.Column="1"
+								Visibility="Collapsed"/>
 					</Grid>
 				</Viewbox>
-				<Button x:Name="More" Click="MoreButton_Click" Content="Higher" Width="86"/>
 
-			</StackPanel>
-			<StackPanel Grid.Row="2">
-
-
+				<Button x:Name="LowerButton" Style="{StaticResource GameButton}"  Click="LowerButton_Click" Height="112" Width="82">
+					<Image Source="/Images/arrowdown.png" Stretch="Uniform"/>
+				</Button>
 			</StackPanel>
 
 		</Grid>

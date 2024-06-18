@@ -22,6 +22,9 @@
     <Page Update="View\ProfileView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Theme\GameButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
