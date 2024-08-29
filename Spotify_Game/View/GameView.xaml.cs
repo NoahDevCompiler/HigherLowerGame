@@ -87,7 +87,7 @@ namespace Spotify_Game.View
             }
             else {
 
-                MessageBox.Show("Leider Sie Haben Falsch Batman Jack mit Passwort 1234");
+                MessageBox.Show("Falsch!!!");
                 this.Close();
               
             }
@@ -116,7 +116,7 @@ namespace Spotify_Game.View
                 DisplayVideo();
 
             } else {
-                MessageBox.Show("Leider Sie Haben Falsch Batman Jack mit Passwort 1234");
+                MessageBox.Show("Falsch!!!");
                 this.Close();
             }
 
